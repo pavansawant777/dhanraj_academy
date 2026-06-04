@@ -1,0 +1,130 @@
+/* navbar code */
+        :root {
+            --yellow: #FFC107;
+            --primary: #0D6EFD; 
+            --white:  #FFFFFF;
+            --black:  #111111;
+            --border: rgba(0,0,0,0.10);
+        }
+ 
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'DM Sans', sans-serif; background: #F5F0E8; }
+ 
+        /* UTILITY BAR */
+        .utility-bar {
+            background: #1a1a2e;
+            padding: 6px 0;
+            font-size: 12px;
+            color: rgba(255,255,255,0.60);
+        }
+        .utility-bar a { color: rgba(255,255,255,0.60); text-decoration: none; }
+        .utility-bar a:hover { color: var(--yellow); }
+        .utility-bar .divider {
+            width: 1px; height: 12px;
+            background: rgba(255,255,255,0.15);
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 10px;
+        }
+ 
+        /* MAIN NAVBAR */
+        .main-nav {
+            background: var(--white);
+            border-bottom: 3px solid var(--yellow);
+            position: sticky;
+            top: 0; z-index: 1000;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+        }
+ 
+        /* LOGO */
+        .brand-block {
+            display: flex; align-items: center; gap: 10px;
+            text-decoration: none;
+        }
+        .brand-icon {
+            width: 60px; height: 60px;
+            border-radius: 50%; overflow: hidden;
+            background: #f0f0f0;
+            border: 2px solid var(--yellow);
+            flex-shrink: 0;
+        }
+        .brand-icon img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .brand-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 17px; font-weight: 700;
+            color: var(--black);
+            white-space: nowrap;
+        }
+ 
+        /* NAV LINKS */
+        .nav-menu {
+            list-style: none;
+            margin: 0; padding: 0;
+            display: flex; align-items: center;
+            gap: 2px;
+        }
+        .nav-menu .nav-link {
+            display: block;
+            padding: 8px 13px;
+            font-size: 13.5px; font-weight: 500;
+            color: var(--black);
+            text-decoration: none;
+            white-space: nowrap;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+        .nav-menu .nav-link:hover  { background: rgba(255,193,7,0.15); }
+        .nav-menu .nav-link.active { background: var(--yellow); font-weight: 700; }
+ 
+        /* ENROLL BUTTON */
+        .btn-enroll {
+            background: var(--yellow); color: var(--black);
+            font-size: 13px; font-weight: 700;
+            letter-spacing: 0.04em; text-transform: uppercase;
+            padding: 8px 18px; border: none; border-radius: 6px;
+            cursor: pointer; text-decoration: none;
+            white-space: nowrap;
+            box-shadow: 0 2px 8px rgba(255,193,7,0.35);
+            transition: background 0.2s, transform 0.15s;
+        }
+        .btn-enroll:hover { background: #e6a800; transform: translateY(-1px); color: var(--black); }
+ 
+        /* HAMBURGER */
+        .nav-toggler {
+            background: none;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 7px 10px;
+            cursor: pointer;
+            display: flex; flex-direction: column; gap: 5px;
+        }
+        .toggler-bar {
+            display: block; width: 22px; height: 2px;
+            background: var(--black); border-radius: 2px;
+        }
+ 
+        /* MOBILE DROPDOWN */
+        .nav-collapse {
+            display: none;
+            flex-direction: column;
+            padding: 10px 16px 16px;
+            border-top: 1px solid var(--border);
+            gap: 4px;
+        }
+        .nav-collapse.open { display: flex; }
+ 
+        /* Mobile nav links — vertical style */
+        .nav-collapse .nav-menu {
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+        }
+        .nav-collapse .nav-menu li { width: 100%; }
+        .nav-collapse .nav-menu .nav-link {
+            width: 100%;
+            padding: 10px 14px;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+        .nav-collapse .btn-enroll { margin-top: 6px; }
+    

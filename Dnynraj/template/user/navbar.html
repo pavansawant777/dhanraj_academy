@@ -1,0 +1,103 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar – Dhynraj Academy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'web/style.css' %}">
+</head>
+<body>
+ 
+<!-- UTILITY BAR -->
+<div class="utility-bar">
+    <div class="container d-flex justify-content-between align-items-center">
+        <div>
+            <span>📞 +91 98765 43210</span>
+            <span class="divider"></span>
+            <span>✉️ info@dnynrajacademy.in</span>
+        </div>
+        <div>
+            <a href="#">Admissions 2026</a>
+            <span class="divider"></span>
+            <a href="#">Student Login</a>
+        </div>
+    </div>
+</div>
+ 
+<!-- MAIN NAVBAR -->
+<nav class="main-nav">
+ 
+    <!-- Bootstrap row — everything in ONE row, no wrapping -->
+    <div class="container-fluid px-3">
+        <div class="d-flex align-items-center justify-content-between" style="height: 68px;">
+ 
+            <!-- LOGO (left) -->
+            <a class="brand-block flex-shrink-0" href="#">
+                <div class="brand-icon">
+                    <img src="{% static 'web/images/logo.webp' %}" alt="Logo"
+                         onerror="this.style.display='none'; this.parentElement.style.background='#FFC107';">
+                </div>
+                <span class="brand-name">Dnynraj Academy</span>
+            </a>
+ 
+            <!-- NAV LINKS (center) — hidden on mobile -->
+            <ul class="nav-menu d-none d-lg-flex mx-auto">
+                <li><a class="nav-link active" href="#" onclick="setActive(this)">Home</a></li>
+                <li><a class="nav-link" href="#" onclick="setActive(this)">Courses</a></li>
+                <li><a class="nav-link" href="#" onclick="setActive(this)">Results</a></li>
+                <li><a class="nav-link" href="#" onclick="setActive(this)">Syllabus</a></li>
+                <li><a class="nav-link" href="#" onclick="setActive(this)">Gallery</a></li>
+                <li><a class="nav-link" href="#" onclick="setActive(this)">Blog</a></li>
+                <li><a class="nav-link" href="#" onclick="setActive(this)">Contact</a></li>
+            </ul>
+ 
+          
+            <div class="d-flex align-items-center gap-2 flex-shrink-0">
+               
+                <a href="#" class="btn-enroll d-none d-lg-inline-block">Enroll Now</a>
+ 
+                <!-- Hamburger — visible on mobile only -->
+                <button class="nav-toggler d-lg-none" onclick="toggleMenu()" aria-label="Toggle menu">
+                    <span class="toggler-bar"></span>
+                    <span class="toggler-bar"></span>
+                    <span class="toggler-bar"></span>
+                </button>
+            </div>
+ 
+        </div>
+    </div>
+ 
+    <!-- MOBILE DROPDOWN — only shows on mobile when hamburger clicked -->
+    <div class="nav-collapse d-lg-none" id="navCollapse">
+        <ul class="nav-menu">
+            <li><a class="nav-link active" href="#" onclick="setActive(this)">Home</a></li>
+            <li><a class="nav-link" href="#" onclick="setActive(this)">Courses</a></li>
+            <li><a class="nav-link" href="#" onclick="setActive(this)">Results</a></li>
+            <li><a class="nav-link" href="#" onclick="setActive(this)">Syllabus</a></li>
+            <li><a class="nav-link" href="#" onclick="setActive(this)">Gallery</a></li>
+            <li><a class="nav-link" href="#" onclick="setActive(this)">Blog</a></li>
+            <li><a class="nav-link" href="#" onclick="setActive(this)">Contact</a></li>
+        </ul>
+        <a href="#" class="btn-enroll">Enroll Now</a>
+    </div>
+ 
+</nav>
+ 
+<script>
+    function toggleMenu() {
+        document.getElementById('navCollapse').classList.toggle('open');
+    }
+ 
+    function setActive(clicked) {
+        document.querySelectorAll('.nav-link').forEach(a => a.classList.remove('active'));
+        clicked.classList.add('active');
+    }
+</script>
+ 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
