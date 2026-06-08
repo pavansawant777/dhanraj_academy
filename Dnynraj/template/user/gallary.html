@@ -1,0 +1,186 @@
+{% include "user/navbar.html" %}
+{% include "user/base.html" %}
+
+<section class="gallery-hero">
+
+    <div class="hero-content">
+
+        <!-- <span class="gallery-tag">
+            📸 DHANRAJ ACADEMY GALLERY
+        </span> -->
+
+        <h1>
+           Visual Journey
+            <!-- <span>Of Success</span> -->
+        </h1>
+
+        <p>
+            Explore classroom learning, seminars,
+            student achievements, award ceremonies,
+            and memorable academy moments.
+        </p>
+
+        <!-- <a href="#gallery" class="gallery-btn">
+            Explore Gallery
+        </a> -->
+
+    </div>
+
+</section>
+<!-- fliter section -->
+<!-- images -->
+<section class="gallery-section">
+
+    <div class="gallery-heading">
+        <h2>Our Gallery</h2>
+        <p>Explore Classroom Sessions, Seminars, Results & Events</p>
+    </div>
+
+    <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="classroom">Classroom</button>
+        <button class="filter-btn" data-filter="seminar">Seminars</button>
+        <button class="filter-btn" data-filter="results">Results</button>
+        <button class="filter-btn" data-filter="events">Events</button>
+    </div>
+
+    <div class="gallery-grid">
+
+        <!-- Classroom -->
+        <div class="gallery-item classroom">
+            <img src="/static/web/images/img1.avif">
+        </div>
+
+        <div class="gallery-item classroom">
+            <img src="/static/web/images/img2.avif">
+        </div>
+
+        <!-- Seminar -->
+        <div class="gallery-item seminar">
+            <img src="/static/web/images/img3.avif">
+        </div>
+
+        <div class="gallery-item seminar">
+            <img src="/static/web/images/img4.avif">
+        </div>
+
+        <!-- Results -->
+        <div class="gallery-item results">
+            <img src="/static/web/images/img5.avif">
+        </div>
+
+        <div class="gallery-item results">
+            <img src="/static/web/images/img6.avif">
+        </div>
+
+        <!-- Events -->
+        <div class="gallery-item events">
+            <img src="/static/web/images/img7.avif">
+        </div>
+
+        <div class="gallery-item events">
+            <img src="/static/web/images/img8.avif">
+        </div>
+        <div class="gallery-item events">
+            <img src="/static/web/images/img9.jfif">
+        </div>
+
+    </div>
+
+</section>
+<script>
+    const filterBtns = document.querySelectorAll(".filter-btn");
+const galleryItems = document.querySelectorAll(".gallery-item");
+
+filterBtns.forEach(btn => {
+
+    btn.addEventListener("click", () => {
+
+        filterBtns.forEach(button =>
+            button.classList.remove("active")
+        );
+
+        btn.classList.add("active");
+
+        const filter = btn.getAttribute("data-filter");
+
+        galleryItems.forEach(item => {
+
+            if (
+                filter === "all" ||
+                item.classList.contains(filter)
+            ) {
+                item.style.display = "block";
+            } else {
+                item.style.display = "none";
+            }
+
+        });
+
+    });
+
+});
+</script>
+<!-- success video -->
+ <section class="success-stories">
+
+    <div class="section-title">
+        <!-- <span>Success Stories</span> -->
+        <h2>Our Video Gallary</h2>
+        <!-- <p>
+            Inspiring journeys and motivation for competitive exam aspirants.
+        </p> -->
+    </div>
+
+    <div class="video-row">
+
+<div class="video-card">
+<iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/M_rH3Z_R6-U"
+    title="YouTube video player"
+    frameborder="0"
+    allowfullscreen>
+</iframe>
+    <h3>Success Story</h3>
+    <p>Student Selection Journey</p>
+</div>
+        <div class="video-card">
+            <iframe
+                src="https://www.youtube.com/embed/ZXsQAXx_ao0"
+                title="Success Story 2"
+                allowfullscreen>
+            </iframe>
+
+            <h3>MPSC Preparation Tips</h3>
+            <p>Smart strategies for exam preparation.</p>
+        </div>
+
+        <div class="video-card">
+            <iframe
+                src="https://www.youtube.com/embed/4xDzrJKXOOY"
+                title="Success Story 3"
+                allowfullscreen>
+            </iframe>
+
+            <h3>Police Bharti Motivation</h3>
+            <p>Stay focused on your goals.</p>
+        </div>
+
+        <div class="video-card">
+            <iframe
+                src="https://www.youtube.com/embed/fzQ6gRAEoy0"
+                title="Success Story 4"
+                allowfullscreen>
+            </iframe>
+
+            <h3>Student Success Story</h3>
+            <p>Inspiration from achievers.</p>
+        </div>
+
+    </div>
+
+</section>
+
+{% include "user/footer.html" %}

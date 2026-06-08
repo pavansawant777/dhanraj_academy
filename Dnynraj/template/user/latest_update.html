@@ -1,0 +1,626 @@
+{% include "user/navbar.html" %}
+{% include "user/base.html" %}
+
+<style>
+    body{
+        box-sizing:border-box;
+        font-family:'Poppins',sans-serif;
+        background:#faf8f2;
+        color:#222;
+        overflow-x:hidden;
+}
+</style>
+
+<body>
+
+<section class="latest-updates">
+
+    <!-- Header -->
+
+    <div class="section-header">
+
+        <span class="sub-title">
+
+            Latest Notifications
+
+        </span>
+
+        <h2>
+
+            Latest Updates
+
+        </h2>
+
+        <p>
+
+            Latest Notifications, Results,
+            Admissions & Events
+
+        </p>
+
+    </div>
+
+    <!-- Search -->
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search Updates...">
+
+        <i class="fas fa-search"></i>
+
+    </div>
+
+    <!-- Filter Buttons -->
+
+    <div class="filter-buttons">
+
+        <button
+            class="filter-btn active"
+            data-filter="all">
+
+            All
+
+        </button>
+
+        <button
+            class="filter-btn"
+            data-filter="notification">
+
+            Notifications
+
+        </button>
+
+        <button
+            class="filter-btn"
+            data-filter="result">
+
+            Results
+
+        </button>
+
+        <button
+            class="filter-btn"
+            data-filter="batch">
+
+            New Batch
+
+        </button>
+
+        <button
+            class="filter-btn"
+            data-filter="admission">
+
+            Admission
+
+        </button>
+
+        <button
+            class="filter-btn"
+            data-filter="event">
+
+            Events
+
+        </button>
+
+    </div>
+
+    <!-- Cards -->
+
+    <div class="updates-grid">
+
+        <!-- Card 1 -->
+
+        <div
+            class="update-card"
+            data-category="notification">
+
+            <div class="card-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800"
+                    alt="Notification">
+
+            </div>
+
+            <div class="card-content">
+
+                <span class="category-badge">
+
+                    Notification
+
+                </span>
+
+                <h3>
+
+                    Police Bharti Notification Released
+
+                </h3>
+
+                <p>
+
+                    Maharashtra Police Bharti
+                    application process has started.
+
+                </p>
+
+                <div class="card-footer">
+
+                    <div class="update-date">
+
+                        <i class="fa-regular fa-calendar"></i>
+
+                        08 June 2026
+
+                    </div>
+
+                    <button
+                        class="share-btn">
+
+                        <i class="fas fa-share-nodes"></i>
+
+                        Share
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Card 2 -->
+
+        <div
+            class="update-card"
+            data-category="result">
+
+            <div class="card-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800"
+                    alt="Result">
+
+            </div>
+
+            <div class="card-content">
+
+                <span class="category-badge">
+
+                    Result
+
+                </span>
+
+                <h3>
+
+                    Talathi Result Declared
+
+                </h3>
+
+                <p>
+
+                    Check your result and
+                    merit list online now.
+
+                </p>
+
+                <div class="card-footer">
+
+                    <div class="update-date">
+
+                        <i class="fa-regular fa-calendar"></i>
+
+                        05 June 2026
+
+                    </div>
+
+                    <button
+                        class="share-btn">
+
+                        <i class="fas fa-share-nodes"></i>
+
+                        Share
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Card 3 -->
+
+        <div
+            class="update-card"
+            data-category="batch">
+
+            <div class="card-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800"
+                    alt="Batch">
+
+            </div>
+
+            <div class="card-content">
+
+                <span class="category-badge">
+
+                    Batch
+
+                </span>
+
+                <h3>
+
+                    MPSC Foundation Batch 2026
+
+                </h3>
+
+                <p>
+
+                    Registration started for
+                    new aspirants.
+
+                </p>
+
+                <div class="card-footer">
+
+                    <div class="update-date">
+
+                        <i class="fa-regular fa-calendar"></i>
+
+                        10 June 2026
+
+                    </div>
+
+                    <button
+                        class="share-btn">
+
+                        <i class="fas fa-share-nodes"></i>
+
+                        Share
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+    
+        <!-- Card 4 -->
+
+        <div
+            class="update-card"
+            data-category="admission">
+
+            <div class="card-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800"
+                    alt="Admission">
+
+            </div>
+
+            <div class="card-content">
+
+                <span class="category-badge">
+
+                    Admission
+
+                </span>
+
+                <h3>
+
+                    Gramsevak Admission Open
+
+                </h3>
+
+                <p>
+
+                    New admission process has
+                    officially started.
+
+                </p>
+
+                <div class="card-footer">
+
+                    <div class="update-date">
+
+                        <i class="fa-regular fa-calendar"></i>
+
+                        02 June 2026
+
+                    </div>
+
+                    <button
+                        class="share-btn">
+
+                        <i class="fas fa-share-nodes"></i>
+
+                        Share
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Card 5 -->
+
+        <div
+            class="update-card"
+            data-category="event">
+
+            <div class="card-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=800"
+                    alt="Event">
+
+            </div>
+
+            <div class="card-content">
+
+                <span class="category-badge">
+
+                    Event
+
+                </span>
+
+                <h3>
+
+                    Career Guidance Seminar
+
+                </h3>
+
+                <p>
+
+                    Free seminar for all
+                    competitive exam aspirants.
+
+                </p>
+
+                <div class="card-footer">
+
+                    <div class="update-date">
+
+                        <i class="fa-regular fa-calendar"></i>
+
+                        01 June 2026
+
+                    </div>
+
+                    <button
+                        class="share-btn">
+
+                        <i class="fas fa-share-nodes"></i>
+
+                        Share
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Card 6 -->
+
+        <div
+            class="update-card"
+            data-category="notification">
+
+            <div class="card-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800"
+                    alt="Notification">
+
+            </div>
+
+            <div class="card-content">
+
+                <span class="category-badge">
+
+                    Notification
+
+                </span>
+
+                <h3>
+
+                    Forest Guard Recruitment
+
+                </h3>
+
+                <p>
+
+                    New recruitment notification
+                    has been released.
+
+                </p>
+
+                <div class="card-footer">
+
+                    <div class="update-date">
+
+                        <i class="fa-regular fa-calendar"></i>
+
+                        12 June 2026
+
+                    </div>
+
+                    <button
+                        class="share-btn">
+
+                        <i class="fas fa-share-nodes"></i>
+
+                        Share
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- JavaScript -->
+
+<script>
+
+    const filterButtons =
+    document.querySelectorAll(".filter-btn");
+
+    const cards =
+    document.querySelectorAll(".update-card");
+
+    filterButtons.forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            filterButtons.forEach(btn => {
+
+                btn.classList.remove("active");
+
+            });
+
+            button.classList.add("active");
+
+            const category =
+            button.dataset.filter;
+
+            cards.forEach(card => {
+
+                if (
+                    category === "all" ||
+                    card.dataset.category === category
+                ) {
+
+                    card.style.display = "block";
+
+                }
+
+                else {
+
+                    card.style.display = "none";
+
+                }
+
+            });
+
+        });
+
+    });
+
+    document
+    .getElementById("searchInput")
+    .addEventListener("keyup", function () {
+
+        const value =
+        this.value.toLowerCase();
+
+        cards.forEach(card => {
+
+            const text =
+            card.innerText.toLowerCase();
+
+            if (
+                text.includes(value)
+            ) {
+
+                card.style.display =
+                "block";
+
+            }
+
+            else {
+
+                card.style.display =
+                "none";
+
+            }
+
+        });
+
+    });
+
+    const shareButtons =
+    document.querySelectorAll(".share-btn");
+
+    shareButtons.forEach(button => {
+
+        button.addEventListener("click", async () => {
+
+            const card =
+            button.closest(".update-card");
+
+            const title =
+            card.querySelector("h3").innerText;
+
+            const text =
+            card.querySelector("p").innerText;
+
+            const shareData = {
+
+                title: title,
+
+                text: text,
+
+                url: window.location.href
+
+            };
+
+            if (navigator.share) {
+
+                try {
+
+                    await navigator.share(
+                        shareData
+                    );
+
+                }
+
+                catch (error) {
+
+                    console.log(error);
+
+                }
+
+            }
+
+            else {
+
+                navigator.clipboard.writeText(
+                    window.location.href
+                );
+
+                alert(
+                    "Link Copied Successfully"
+                );
+
+            }
+
+        });
+
+    });
+
+</script>
+
+
+</body>
+
+{% include "user/footer.html" %}

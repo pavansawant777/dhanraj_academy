@@ -19,6 +19,22 @@ from django.urls import path
 from user import views 
 
 urlpatterns = [
+    path('',views.index),
+    path('about/',views.about),
+    path('course/',views.course),
+    path('latest_update/',views.latest_update),
+    path('books_notes/',views.book_notes),
+    path('test_series/',views.test_series),
+    path('result/',views.result),
+    path('scholarship/',views.scholarship),
+    path('faculty/',views.faculty),
+    path('gallary/',views.gallary),
+    path('blog/',views.blog),
+
+    path('contact/',views.contact),
+    
+
     path('admin/', admin.site.urls),
-    path('',views.navbar),
+   
+
 ]

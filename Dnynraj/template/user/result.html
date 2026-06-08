@@ -1,0 +1,487 @@
+{% include "user/navbar.html" %}
+{% include "user/base.html" %}
+
+
+
+<body>
+
+<!-- HERO -->
+
+<section class="hero3">
+
+    <div class="hero-content">
+
+        <span class="hero-tag">
+            Success Stories
+        </span>
+
+        <h1>Our Top Achievers</h1>
+
+        <p>
+            Thousands of students achieved their dreams through dedication and guidance.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- POLICE -->
+
+<section class="result-section">
+
+    <div class="section-title">
+        <h2>🏆 Police Bharti Results</h2>
+    </div>
+
+    <div class="card-grid">
+
+        <div class="student-card">
+
+            <img src="/static/web/images/res-student1.jpg">
+
+            <h3>Rahul Patil</h3>
+
+            <p>Police Bharti 2025</p>
+
+            <span class="rank">
+                AIR Rank 01
+            </span>
+
+            <button class="story-btn" onclick="openStory('Rahul Patil','Police Bharti 2025', 'AIR Rank 01', '/static/web/images/res-student1.jpg'  )">
+
+                View Story
+
+            </button>
+
+        </div>
+
+        <div class="student-card">
+
+            <img src="/static/web/images/res-student2.jpg">
+
+            <h3>Akash Jadhav</h3>
+
+            <p>Police Bharti 2025</p>
+
+            <span class="rank">
+                AIR Rank 04
+            </span>
+
+            <button class="story-btn" onclick="openStory('Akash Jadhav','Police Bharti 2025', 'AIR Rank 04', '/static/web/images/res-student2.jpg')">
+
+                View Story
+
+            </button>
+
+        </div>
+
+        <div class="student-card">
+
+            <img src="/static/web/images/res-student3.jpg">
+
+            <h3>Sagar More</h3>
+
+            <p>Police Bharti 2025</p>
+
+            <span class="rank">
+                AIR Rank 07
+            </span>
+
+            <button class="story-btn" onclick="openStory( 'Sagar More','Police Bharti 2025','AIR Rank 07','/static/web/images/res-student3.jpg')">
+
+                View Story
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- UPSC -->
+
+<!-- UPSC RESULTS -->
+
+<section class="result-section">
+
+    <div class="section-title">
+        <h2>🏆 Gramsevak Results</h2>
+    </div>
+
+    <div class="card-grid">
+
+        <div class="student-card">
+
+            <div class="card-badge">
+                Gramsevak Achiever
+            </div>
+
+            <img src="/static/web/images/res-student4.jpg">
+
+            <h3>Kajal Singh</h3>
+
+            <p>Gramsevak 2025</p>
+
+            <span class="rank">
+                AIR 25
+            </span>
+
+            <button class="story-btn" onclick="openStory('Kajal Singh','Gramsevak 2025','AIR 25', '/static/web/images/res-student4.jpg' )">
+                View Story
+            </button>
+
+        </div>
+
+        <div class="student-card">
+
+            <div class="card-badge">
+                Gramsevak Achiever
+            </div>
+
+            <img src="/static/web/images/res-student5.jpg">
+
+            <h3>Amit Sharma</h3>
+
+            <p>Gramsevak 2025</p>
+
+            <span class="rank">
+                AIR 41
+            </span>
+
+            <button class="story-btn" onclick="openStory('Amit Sharma', 'Gramsevak 2025', 'AIR 41', '/static/web/images/res-student5.jpg'
+            )">
+                View Story
+            </button>
+
+        </div>
+
+        <div class="student-card">
+
+            <div class="card-badge">
+                Gramsevak Achiever
+            </div>
+
+            <img src="/static/web/images/res-student6.jpg">
+
+            <h3>Pooja Verma</h3>
+
+            <p>Gramsevak 2025</p>
+
+            <span class="rank">
+                AIR 58
+            </span>
+
+            <button class="story-btn" onclick="openStory('Pooja Verma','Gramsevak 2025', 'AIR 58', '/static/web/images/res-student6.jpg')">
+                View Story
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- MPSC -->
+
+<section class="result-section">
+
+    <div class="section-title">
+        <h2>🏆 MPSC Results</h2>
+    </div>
+
+    <div class="card-grid">
+
+        <!-- Card 1 -->
+
+        <div class="student-card">
+
+            <div class="card-badge">
+                MPSC Top Performer
+            </div>
+
+            <img src="/static/web/images/res-student7.jpg">
+
+            <h3>Priya Deshmukh</h3>
+
+            <p>MPSC 2025</p>
+
+            <span class="rank">
+                State Rank 03
+            </span>
+
+            <button class="story-btn"
+            onclick="openStory(
+            'Priya Deshmukh',
+            'MPSC 2025',
+            'State Rank 03',
+            '/static/web/images/res-student7.jpg'
+            )">
+                View Story
+            </button>
+
+        </div>
+
+        <!-- Card 2 -->
+
+        <div class="student-card">
+
+            <div class="card-badge">
+                MPSC Top Performer
+            </div>
+
+            <img src="/static/web/images/res-student8.jpg">
+
+            <h3>Neha More</h3>
+
+            <p>MPSC 2025</p>
+
+            <span class="rank">
+                State Rank 08
+            </span>
+
+            <button class="story-btn"
+            onclick="openStory(
+            'Neha More',
+            'MPSC 2025',
+            'State Rank 08',
+            '/static/web/images/res-student8.jpg'
+            )">
+                View Story
+            </button>
+
+        </div>
+
+        <!-- Card 3 -->
+
+        <div class="student-card">
+
+            <div class="card-badge">
+                MPSC Top Performer
+            </div>
+
+            <img src="/static/web/images/res-student9.jpg">
+
+            <h3>Rohan Pawar</h3>
+
+            <p>MPSC 2025</p>
+
+            <span class="rank">
+                State Rank 12
+            </span>
+
+            <button class="story-btn"
+            onclick="openStory(
+            'Rohan Pawar',
+            'MPSC 2025',
+            'State Rank 12',
+            '/static/web/images/res-student9.jpg'
+            )">
+                View Story
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- TALATHI -->
+
+<section class="result-section">
+
+    <div class="section-title">
+        <h2>🏆 Talathi Results</h2>
+    </div>
+
+    <div class="card-grid">
+
+        <!-- Card 1 -->
+
+        <div class="student-card">
+
+            <div class="card-badge">
+                Talathi Achiever
+            </div>
+
+            <img src="/static/web/images/res-student10.jpg">
+
+            <h3>Sagar Pawar</h3>
+
+            <p>Talathi 2025</p>
+
+            <span class="rank">
+                District Rank 01
+            </span>
+
+            <button class="story-btn"
+            onclick="openStory(
+            'Sagar Pawar',
+            'Talathi 2025',
+            'District Rank 01',
+            '/static/web/images/res-student10.jpg'
+            )">
+                View Story
+            </button>
+
+        </div>
+
+        <!-- Card 2 -->
+
+        <div class="student-card">
+
+            <div class="card-badge">
+                Talathi Achiever
+            </div>
+
+            <img src="/static/web/images/res-student11.jpg">
+
+            <h3>Vaishnavi Patil</h3>
+
+            <p>Talathi 2025</p>
+
+            <span class="rank">
+                District Rank 05
+            </span>
+
+            <button class="story-btn"
+            onclick="openStory(
+            'Vaishnavi Patil',
+            'Talathi 2025',
+            'District Rank 05',
+            '/static/web/images/res-student11.jpg'
+            )">
+                View Story
+            </button>
+
+        </div>
+
+        <!-- Card 3 -->
+
+        <div class="student-card">
+
+            <div class="card-badge">
+                Talathi Achiever
+            </div>
+
+            <img src="/static/web/images/res-student12.jpg">
+
+            <h3>Mahesh Jagtap</h3>
+
+            <p>Talathi 2025</p>
+
+            <span class="rank">
+                District Rank 09
+            </span>
+
+            <button class="story-btn"
+            onclick="openStory(
+            'Mahesh Jagtap',
+            'Talathi 2025',
+            'District Rank 09',
+            '/static/web/images/res-student12.jpg'
+            )">
+                View Story
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- POPUP -->
+
+<div class="story-modal" id="storyModal">
+
+    <div class="modal-content">
+
+        <span class="close-modal">&times;</span>
+
+      <div class="modal-header">
+            <img id="modalImg" src="">
+            <div class="modal-header-info">
+                <h2 id="modalName"></h2>
+                <p id="modalExam"></p>
+                <span class="modal-rank" id="modalRank"></span>
+            </div>
+        </div>
+
+        <div class="story-content">
+
+            <h3>Success Journey</h3>
+
+            <p>
+
+                Started preparation with consistency and discipline.
+                Focused on daily revision, mock tests and smart study strategy.
+                Achieved remarkable success through dedication and hard work.
+
+            </p>
+
+            <h3>Study Routine</h3>
+
+            <ul>
+
+                <li>6 Hours Daily Study</li>
+                <li>Weekly Mock Tests</li>
+                <li>Daily Revision</li>
+                <li>Current Affairs Practice</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+const modal =
+document.getElementById("storyModal");
+
+const closeBtn =
+document.querySelector(".close-modal");
+
+function openStory(
+name,
+exam,
+rank,
+image
+){
+
+document.getElementById("modalName").innerText = name;
+
+document.getElementById("modalExam").innerText = exam;
+
+document.getElementById("modalRank").innerText = rank;
+
+document.getElementById("modalImg").src =image;
+
+modal.classList.add("show");
+
+}
+
+closeBtn.onclick = ()=>{
+
+modal.classList.remove("show");
+
+}
+
+window.onclick = (e)=>{
+
+if(e.target === modal){
+
+modal.classList.remove("show");
+
+}
+
+}
+
+</script>
+
+</body>
+
+
+
+{% include "user/footer.html" %}
