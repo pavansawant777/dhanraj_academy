@@ -10,6 +10,28 @@ def about(req):
 def course(req):
     return render(req,"user/course.html")
 
+def course_mpsc(req):
+    return render(req,"user/course_mpsc.html")
+
+def course_police(req):
+    return render(req,"user/course_police.html")
+
+def course_talathi(req):
+    return render(req,"user/course_talathi.html")
+    
+
+def course_vanrakshak(req):
+    return render(req,"user/course_vanrakshak.html")
+
+
+def course_gramsevak(req):
+    return render(req,"user/course_gramsevak.html")
+
+
+def course_allexams(req):
+    return render(req,"user/course_allexams.html")
+
+
 def latest_update(req):
     return render(req,"user/latest_update.html")
 
