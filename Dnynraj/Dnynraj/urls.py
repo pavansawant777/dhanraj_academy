@@ -16,31 +16,32 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from user import views 
+from user import views as us
+from adpanel import views as ad
 
 urlpatterns = [
-    path('',views.index),
-    path('about/',views.about),
-    path('course/',views.course),
-    path('course_mpsc/',views.course_mpsc),
-    path('course_police/',views.course_police),
-    path('course_talathi/',views.course_talathi),
-    path('course_vanrakshak/',views.course_vanrakshak),
-    path('course_gramsevak/',views.course_gramsevak),   
-    path('course_allexams/',views.course_allexams),
-    path('latest_update/',views.latest_update),
-    path('books_notes/',views.book_notes),
-    path('test_series/',views.test_series),
-    path('result/',views.result),
-    path('scholarship/',views.scholarship),
-    path('faculty/',views.faculty),
-    path('gallary/',views.gallary),
-    path('blog/',views.blog),
+    path('',us.index),
+    path('about/',us.about),
+    path('course/',us.course),
+    path('latest_update/',us.latest_update),
+    path('books_notes/',us.book_notes),
+    path('test_series/',us.test_series),
+    path('result/',us.result),
+    path('scholarship/',us.scholarship),
+    path('faculty/',us.faculty),
+    path('gallary/',us.gallary),
+    path('blog/',us.blog),
 
-    path('contact/',views.contact),
+    path('contact/',us.contact),
     
 
-    path('admin/', admin.site.urls),
+    # path('admin/', admin.site.urls),
+
+    # admin urls
+    path('admin/',ad.index),
+    path('admin/about/',ad.about),
+    path('save_train/',ad.about_save, name="save_train"),
+    path('delete_about/<int:id>/',ad.delete_about, name="delete_about"),
    
 
 ]

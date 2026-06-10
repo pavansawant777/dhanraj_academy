@@ -1,0 +1,310 @@
+{% include "admin/navbar.html" %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Dhanraj Form</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+body{
+background: linear-gradient(135deg,#eef2ff,#f8fafc);
+font-family:'Poppins',sans-serif;
+min-height:100vh;
+}
+
+/* Form Card */
+.form-card{
+max-width:1000px;
+margin:40px auto;
+background:#fff;
+padding:35px;
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,.08);
+animation:fadeInUp .7s ease;
+}
+
+.form-title{
+text-align:center;
+font-weight:700;
+color:#fff;
+background:linear-gradient(135deg,#2563eb,#4f46e5);
+padding:15px;
+border-radius:12px;
+margin-bottom:30px;
+}
+
+h5{
+font-weight:700;
+padding:10px 0;
+border-bottom:2px solid #e5e7eb;
+}
+
+label{
+font-weight:600;
+color:#374151;
+}
+
+.form-control{
+border-radius:12px;
+padding:14px;
+border:1px solid #d1d5db;
+transition:.3s;
+}
+
+.form-control:hover{
+transform:translateY(-2px);
+}
+
+.form-control:focus{
+border-color:#2563eb;
+box-shadow:0 0 12px rgba(37,99,235,.25);
+}
+
+/* Submit Button */
+.btn-submit{
+width:100%;
+padding:14px;
+font-size:18px;
+font-weight:600;
+border:none;
+border-radius:12px;
+background:linear-gradient(135deg,#2563eb,#4f46e5);
+transition:.3s;
+}
+
+.btn-submit:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 25px rgba(37,99,235,.3);
+}
+
+/* Table */
+.table-responsive{
+width:100%;
+overflow:hidden;
+border-radius:15px;
+}
+
+.table{
+width:100%;
+table-layout:fixed;
+background:#fff;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.table thead th{
+background:linear-gradient(135deg,#1e293b,#334155);
+color:#fff;
+text-align:center;
+padding:15px;
+font-size:14px;
+}
+
+.table td{
+text-align:center;
+vertical-align:middle;
+white-space:normal;
+word-break:break-word;
+padding:12px;
+}
+
+.table td:nth-child(3){
+text-align:left;
+max-width:350px;
+}
+
+.table tbody tr{
+transition:.3s;
+}
+
+.table tbody tr:hover
+
+/* Action Buttons */
+.action-buttons{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:6px;
+flex-wrap:wrap;
+}
+
+.action-buttons .btn{
+min-width:75px;
+border-radius:8px;
+font-weight:600;
+}
+
+.btn-warning{
+color:#fff;
+}
+
+/* Heading */
+.records-heading{
+text-align:center;
+font-weight:700;
+color:#2563eb;
+margin-bottom:20px;
+}
+
+/* Animation */
+@keyframes fadeInUp{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="form-card">
+        <h2 class="form-title">Add About Dhanraj Information</h2>
+
+        <form action="/save_train/" method="POST">
+            {% csrf_token %}
+
+            <!-- Heading -->
+            <div class="mb-3">
+                <label>Heading</label>
+                <input type="text" name="heading" class="form-control" placeholder="Enter Heading">
+            </div>
+
+            <!-- Paragraph -->
+            <div class="mb-3">
+                <label>Paragraph</label>
+                <textarea name="paragraph" rows="5" class="form-control" placeholder="Enter Description"></textarea>
+            </div>
+
+            <hr>
+
+            <!-- Training -->
+          <h5 class="mb-3 text-primary">🚀 Training Information</h5>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label>Training Number</label>
+                    <input type="text" name="train_number" class="form-control">
+                </div>
+
+               
+            </div>
+
+            <hr>
+
+            <!-- Students -->
+           <h5 class="mb-3 text-success">🎓 Students Information</h5>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label>Selected Students Number</label>
+                    <input type="text" name="selc_stud" class="form-control">
+                </div>
+
+               
+            </div>
+
+            <hr>
+
+            <!-- Faculty -->
+           <h5 class="mb-3 text-warning">👨‍🏫 Faculty Information</h5>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label>Experienced Faculty Number</label>
+                    <input type="text" name="expfac_num" class="form-control">
+                </div>
+
+                
+            </div>
+
+            <hr>
+
+            <!-- Courses -->
+           <h5 class="mb-3 text-danger">📚 Course Information</h5>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label>Course Number</label>
+                    <input type="text" name="course_num" class="form-control">
+                </div>
+
+                
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-submit">
+                Save Information
+            </button>
+
+        </form>
+    </div>
+
+    <hr class="my-5">
+
+<h3 class="records-heading">
+    📋 About Information Records
+</h3>
+
+<div class="table-responsive" style="overflow-x:auto;">
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Heading</th>
+                <th>paragraph</th>
+                <th> train_number</th>
+                <th>stu_num</th>
+                <th>expfac_num</th>
+                <th>course_num</th>
+
+                <th width="180">Action</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for i in about_data %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ i.heading }}</td>
+                <td>{{ i.paragraph }}</td>
+                <td>{{ i.train_number }}</td>
+                <td>{{ i.stu_num }}</td>
+                <td>{{ i.expfac_num }}</td>
+                <td>{{ i.course_num }}</td>
+
+
+                <td>
+                    <div class="action-buttons">
+                        <a href="" class="btn btn-warning btn-sm">Update</a>
+                        <a href="{% url 'delete_about' i.id %}" class="btn btn-danger btn-sm">Delete</a>
+                    </div>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+               <td colspan="8" class="text-center fw-bold text-danger">
+                    No Data Found
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+</div>
+
+</body>
+</html>
+
+
+{% include "admin/footer.html" %}
