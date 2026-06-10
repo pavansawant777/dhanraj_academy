@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'Dnynraj.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'bdi2ou58znatoyevl7zv',
+        'USER': 'uhvo3jtcuxfujckv',
+        'PASSWORD': 'XLAmz2Y3spiNynjvA2Th',
+        'HOST': 'bdi2ou58znatoyevl7zv-mysql.services.clever-cloud.com',
+      
     }
 }
 
